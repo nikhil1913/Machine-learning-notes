@@ -1,66 +1,58 @@
-📌 Linear Regression – Quick Notes
-🧠 Concept
-Linear Regression is used to model the relationship between a dependent variable (target) and one or more independent variables (features).
+Linear Regression notes
 
-It tries to fit a straight line (Y = mX + c) that best predicts Y from X.
+Machine Learning = it is categorised as x and y {
+                    X -> independent variable
+                    Y -> dependent variable }
 
-⚙️ Steps in Implementation
-Import Libraries
+we use X to manipulate Y 
 
-python
-Copy
-Edit
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-Load & Preprocess Data
+exapmple : lets say we are analyzing companies on the basis of profit 
+            Here The profit ( Y ) is our dependent variable which depends on R&D ( X )
 
-Handle missing values
+In our data we majorly got two types of data ( NUMERIC , CATEGORIAL )
 
-Encode categorical data (OneHotEncoder or pd.get_dummies())
+******************************************************************************************************
 
-Avoid Dummy Variable Trap
+Then we have got Three types of learning 1-> Supervised 2-> Unsupervised 3-> Reinforcement
 
-Remove one dummy column to avoid multicollinearity
+1-> Supervised :  Data that we feed is labeled generally
+2-> Unsupervised : Learns from unlabeled data
+3-> Reinforcement : Learns from interaction , feedback , mistakes etc
 
-python
-Copy
-Edit
-X = X[:, 1:]
-Split the Data
+******************************************************************************************************
 
-python
-Copy
-Edit
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
-Train the Model
+Then Supervised is further clasified to two : 1-> Regression , 2-> Clasification
 
-python
-Copy
-Edit
-regressor = LinearRegression()
-regressor.fit(X_train, Y_train)
-Make Predictions
+here we are talking about linear regression or regression
+which have three types
+1-> simple
+2-> multiple
+3-> polynomial
 
-python
-Copy
-Edit
-Y_pred = regressor.predict(X_test)
-Check Coefficients
+** Linear regression is a statistical model used to predict the relationship between the independent and dependent 
+variable
 
-python
-Copy
-Edit
-print(regressor.coef_)   # Slopes
-print(regressor.intercept_)  # Intercept
-📉 Key Terms
-Intercept (b₀): Value of Y when all X = 0
+we mainly got 2 examine facters 
+1-> which variable is particular are significant predictors of outcome variable
+2-> How significant is linear regression line to make predictions with highest possible accuraccy
 
-Coefficient (b₁, b₂...): Effect of each feature on the target
+**************************************************************************************************************
 
-Random State: Ensures reproducible splits
+Simpliest form of linear regression with one X 
+Y = f(X)
+Y = m*X + c
 
-Seed: Controls randomness in shuffling/training
+for multiple dependent variables we have get
+Y = m1*X1 + m2*X2 ..... mn*Xn
 
-Dummy Variable Trap: Occurs when all dummy variables are used — remove one
+
+For some data set where we do not got the clear tragectory or a trend
+we use a formulae to calulate the intercept and coeffecient (Slope)
+
+m = (N*(summassion(X*Y)) - (summasion(X)*summasion(Y);/(N*summasion(X^2)) - summasion(Y^2)
+c = summasion(Y) * summasion(X^2) - summasion(X)*summasion(YX)/(n*summasion(X^2)) - summasion(X)^2)
+
+Then we compare the Ypred and Yactual and got the distance of the error
+
+************************************************************************************************************8
 
