@@ -1,0 +1,14 @@
+LOGESTIC REGRESSION NOTES
+
+Logistic Regression -> it is an algorithm to train our model for binary clasification
+"" it is an algo used to predict the binary outcome based on the set of independent variable
+   The outcome will be always discrete ""
+
+
+linear regression                               logistic regression
+used to solve regression problems            used to solve classification probelm
+response variable are continous              response variable is categorial
+estimate Y based on the change on X          calculate the probability of event to take place
+graph - straight line                        graph  -  gigmoid curve
+
+** not in its real from but it is also used in image classification as well **
