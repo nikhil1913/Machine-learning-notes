@@ -1,1 +1,22 @@
 
+DECISION TREE NOTES :
+
+  Decision tree is a tree shaped diagram used to determine a course of action . each baranch of a tree represents a possible decision , oversome or reation/
+
+It is used in both Regression and Clasification
+  Classification = a clasification tree determine a set of logical if-then condition to classify problem
+  Regression = a regression tree is used when the target variable is contigous or numerical in nature.
+              we fit a regression model to target vairable using eacch independet variable . each split is made based on the sum of squared error
+
+
+TERMS used in decission tree:
+1-> ENTROPY : the measure of randomness or unpredictability
+2-> INFORMATION GAIN : measure of decrease in entropy after data is getting splitted
+3-> LEAF NODE : leaf node carries a classification or decission
+
+RULES OF SPLITING :
+  while spliting we have to frame condition in such a way that after splitting the INFORMATION GAIN should be maximum.
+
+  formaulae behing it is ** summasion(i=0 to n)P(value)*log2(value) **
+
+for more knowledge and practical gain we are praticing it on loan repayment prediction model 
